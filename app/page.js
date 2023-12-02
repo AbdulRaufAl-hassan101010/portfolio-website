@@ -59,7 +59,10 @@ const page = () => {
           </header>
         </div>
 
-        <section className="about container mx-auto px-10 py-20 mb-5">
+        <section
+          className="about container mx-auto px-10 py-20 mb-5"
+          id="about"
+        >
           <div className="wrapper">
             <h2 className="header mb-10 text-accent">About Me.</h2>
             <p className="mb-20" id="about">
@@ -97,7 +100,10 @@ const page = () => {
           </div>
         </section>
 
-        <section className="container mx-auto bg-accent py-20 px-10 text-white mb-20">
+        <section
+          className="container mx-auto bg-accent py-20 px-10 text-white mb-20"
+          id="portfolio"
+        >
           <h3 className="header mb-10">Portfolio Projects</h3>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mb-10">
             <article className="">

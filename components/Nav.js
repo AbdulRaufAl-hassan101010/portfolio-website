@@ -22,7 +22,7 @@ const Nav = () => {
           <Link href="#portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link href="/about" className="desktop-link">
+          <Link href="#about" className="desktop-link">
             About
           </Link>
         </li>
