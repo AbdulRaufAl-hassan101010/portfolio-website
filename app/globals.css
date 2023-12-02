@@ -3,25 +3,125 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #E0DAD0;
+  --secondary-color: #AEA79C;
+  --accent-color: #B94928;
+  --dark-color: #16110F
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+html {
+  background-color: var(--primary-color);
+  font-size: 10px;
+  line-height: 1.6;
 }
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 16px;
+  color: #1e1e1e
+}
+
+
+
+/* utiles */
+.logo {
+  font-size: 4rem;
+}
+
+
+
+.hero { 
+  background: linear-gradient(to right,var(--primary-color) 70%, var(--secondary-color) 30%);
+}
+
+.hero .container {
+  max-height: 60rem;
+  height: 100%;
+}
+
+.header {
+  font-family: 'open sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-img {
+  border-radius: 0% 0% 0% 60%;
+  overflow: hidden;
+}
+
+.about {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+  min-height: 100rem;
+ 
+}
+
+.about .wrapper {
+  position: absolute;
+  top: -10%;
+  background: var(--secondary-color);
+  padding: 10rem;
+  opacity: 0.85;
+  overflow: hidden;
+}
+
+footer {
+  background: linear-gradient(to right,var(--accent-color) 50%, var(--secondary-color));
+  color: #fff
+}
+
+
+@media (max-width: 1056px) {
+  .about .wrapper {
+    position: absolute;
+    top: -5rem
+  }
+
+}
+
+
+
+@media (max-width: 968px) {
+
+  footer {
+    background: linear-gradient(to bottom,var(--accent-color) 50%, var(--secondary-color));
+    color: #fff
+  }
+
+  .hero { 
+    background: var(--primary-color);
+  }
+
+  .hero header .context{
+    display: block;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+
+  .about {
+    width: 100%;   
+  }
+
+
+  .about .wrapper {
+    position: relative;
+    padding: 10rem 3rem;
+  }
+  
+}
+
+
+@media (max-width: 698px) {
+  nav ul .desktop-link {
+    display: none;
+  }
 }
